@@ -1,5 +1,8 @@
 # Learn-React
 
+## Host Environment
+- Project built on Kali Linux VM
+
 ## Tools required
 - **Visual Studio**: [[Installation](https://code.visualstudio.com/download)]: Linux, `.deb` version.
 - **Docker**: [[Installation Guide](https://docs.docker.com/engine/install/)]
