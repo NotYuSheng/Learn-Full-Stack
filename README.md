@@ -1,4 +1,4 @@
-# Learn-React
+# Learn-Full-Stack
 
 ## Host Environment
 - Project built on Kali Linux VM
