@@ -1,53 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { List, Plus, Trash2 } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
-function Todo() {
+const TodoList = () => {
   const [todos, setTodos] = useState([]);
-  const [input, setInput] = useState('');
+  const [newTodo, setNewTodo] = useState('');
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
-
-  const fetchTodos = async () => {
-    try {
-      const response = await axios.get('http://localhost:5000/todos');
-      setTodos(response.data);
-    } catch (error) {
-      console.error('Error fetching todos:', error);
+  const addTodo = () => {
+    if (newTodo.trim() !== '') {
+      setTodos([...todos, { id: Date.now(), text: newTodo }]);
+      setNewTodo('');
     }
   };
 
-  const addTodo = async (e) => {
-    e.preventDefault();
-    if (!input) return;
-
-    try {
-      await axios.post('http://localhost:5000/todos', { todo: input });
-      fetchTodos(); // Fetch the updated list of todos
-      setInput('');
-    } catch (error) {
-      console.error('Error adding todo:', error);
-    }
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
   };
 
   return (
-    <div>
-      <form onSubmit={addTodo}>
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter a todo"
+    <div className="max-w-md mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4 text-center">Todo List</h1>
+      <div className="flex mb-4">
+        <Input
+          type="text"
+          value={newTodo}
+          onChange={(e) => setNewTodo(e.target.value)}
+          placeholder="Add a new todo"
+          className="flex-grow mr-2"
         />
-        <button type="submit">Add Todo</button>
-      </form>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.text}</li>
+        <Button onClick={addTodo}>
+          <Plus className="w-4 h-4 mr-2" />
+          Add
+        </Button>
+      </div>
+      <ul className="space-y-2">
+        {todos.map(todo => (
+          <li key={todo.id} className="flex items-center justify-between bg-gray-100 p-2 rounded">
+            <span className="flex items-center">
+              <List className="w-4 h-4 mr-2" />
+              {todo.text}
+            </span>
+            <Button variant="destructive" size="sm" onClick={() => deleteTodo(todo.id)}>
+              <Trash2 className="w-4 h-4" />
+            </Button>
+          </li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
-export default Todo;
+export default TodoList;
