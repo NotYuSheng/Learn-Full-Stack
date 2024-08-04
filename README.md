@@ -45,3 +45,9 @@ cd frontend
 docker build -f Dockerfile.dev -t frontend-dev .
 docker run -d -p 3000:3000 -v $(pwd):/app frontend-dev
 ```
+
+### Manually installing npm pakages
+```
+sudo apt install nodejs
+curl -L https://npmjs.org/install.sh | sudo sh 
+```
