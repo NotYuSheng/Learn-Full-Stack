@@ -1,5 +1,9 @@
 # Learn-Full-Stack
 
+![GitHub last commit](https://img.shields.io/github/last-commit/NotYuSheng/Learn-Full-Stack?color=red)
+
+**IMPORTANT** - This project is currently under development.
+
 ## Host Environment
 - Project built on Kali Linux VM
 
@@ -12,4 +16,24 @@
 ```
 git clone https://github.com/NotYuSheng/Learn-Full-Stack.git
 cd Learn-Full-Stack
+```
+
+2.  Build the Docker images:
+```
+docker-compose build
+```
+
+3.  Run images
+```
+docker-compose up -d
+```
+
+4.  Access webpage from host
+```
+<host-ip>:3000
+```
+
+Access Kibana dashboard from host
+```
+<host-ip>:5601
 ```
