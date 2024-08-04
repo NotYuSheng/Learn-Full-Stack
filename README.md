@@ -4,7 +4,7 @@
 - Project built on Kali Linux VM
 
 ## Tools required
-- **Visual Studio**: [[Installation Guide]([https://code.visualstudio.com/download](https://code.visualstudio.com/docs/setup/linux))]: Linux, `.deb` version.
+- **Visual Studio**: [[Installation Guide](https://code.visualstudio.com/docs/setup/linux)]: Linux, `.deb` version.
 - **Docker**: [[Installation Guide](https://docs.docker.com/engine/install/)]
 
 ## Setup
