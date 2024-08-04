@@ -28,9 +28,9 @@ docker-compose build
 docker-compose up -d
 ```
 
-4.  Access webpage from host
+4.  Access webpage from host (Define port number in `.env`)
 ```
-<host-ip>:3000
+<host-ip>:8080
 ```
 
 Access Kibana dashboard from host
