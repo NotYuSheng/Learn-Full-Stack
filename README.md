@@ -37,3 +37,11 @@ Access Kibana dashboard from host
 ```
 <host-ip>:5601
 ```
+
+## Run as developer
+### Frontend
+```
+cd frontend
+docker build -f Dockerfile.dev -t frontend-dev .
+docker run -d -p 3000:3000 -v $(pwd):/app frontend-dev
+```
