@@ -30,7 +30,7 @@ docker-compose up -d
 
 4.  Access webpage from host
 ```
-<host-ip>:5000
+<host-ip>:3000
 ```
 
 Access Kibana dashboard from host
