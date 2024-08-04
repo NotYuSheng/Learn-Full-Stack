@@ -42,6 +42,6 @@ Access Kibana dashboard from host
 ### Frontend
 ```
 cd frontend
-docker build -f Dockerfil.dev -t frontend-dev .
+docker build -f Dockerfile.dev -t frontend-dev .
 docker run -p 3000:3000 -v $(pwd):/app frontend-dev -d
 ```
