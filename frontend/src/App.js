@@ -1,12 +1,15 @@
 import React from 'react';
-import TodoList from './components/TodoList';
+import Header from './components/Header'; // Adjust path as needed
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <TodoList />
+    <div>
+      <Header />
+      <main>
+        <h2>Welcome to My Application</h2>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
