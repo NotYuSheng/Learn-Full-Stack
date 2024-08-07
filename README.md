@@ -2,7 +2,8 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/NotYuSheng/Learn-Full-Stack?color=red)
 
-**IMPORTANT** - This project is currently under development.
+> [!NOTE] 
+This project is currently under development.
 
 ## Host Environment
 - Project built on Kali Linux VM
